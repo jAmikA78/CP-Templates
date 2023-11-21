@@ -1,18 +1,16 @@
 # Code Templates
 
-<center>
-   <mark>
-      This repo not ready yet
-   </mark>
-</center>
-
 ### Table of content
 
 1. [Number theory](#Number-Theory)
     - [Is prime](#Check-number-if-prime-or-not)
     - [Prime Factorization](#Prime-Factorization)
-    - [Get Divisors](Get-Divisors)
-    - [Sieve of Eratosthenes](Sieve%20of%20Eratosthenes)
+    - [Get Divisors](#Get-Divisors)
+    - [Sieve of Eratosthenes](#Sieve-of-Eratosthenes)
+    - [Power](#Power)
+    - [Power with mod](#Power-with-mod)
+    - [GCD](#GCD)
+    - [SPF](#SPF)
 
 <br>
 
@@ -29,14 +27,14 @@
 | Source                    | Content                                                            | Type  | link                                                                 |
 |---------------------------|--------------------------------------------------------------------|-------|----------------------------------------------------------------------|
 | Mahmoud Ayman's Session 1 | *Divisors, GCD, LCM, Prime Factorization, Pow, PowMod, Sieve, lpf* | Video | [link](https://youtu.be/-ptnoz7Us_I?si=hDSCoXu97gNR6PPm)             |
-| Mahmoud Ayman's Session 2 | *Modular Arithmetic,*                                              | Video | [link](https://youtu.be/n8_mqm2amzY?si=ck64qVKtoZsFRCd8)             |
+| Mahmoud Ayman's Session 2 | *Modular Arithmetic, ...*                                          | Video | [link](https://youtu.be/n8_mqm2amzY?si=ck64qVKtoZsFRCd8)             |
 | Mostafa Saad              | _Primes_                                                           | Video | [link](https://youtu.be/VZBfW08ECgA)                                 |
 | Mostafa Saad              | _Factorization_                                                    | Video | [link](https://youtu.be/-5ApOQDhBtU)                                 |
 | Mostafa Saad              | _Fib, GCD, LCM, Pow_                                               | Video | [link](https://youtu.be/YklnFXpq0ZE?si=2ueThtekooj1o5uU)             |	
 | Muhammed Afifi            | _Prime factorization using Sieve_                                  | Video | [link](https://youtu.be/xUk2SggGDRc?si=rjt_Bjb3PYAmktZW)             |
 | CP-Algorithm              | _sieve-of-eratosthenes_                                            | Blog  | [link](https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html) |
 | CP-Algorithm              | _Divisors_                                                         | Blog  | [link](https://cp-algorithms.com/algebra/divisors.html)              |
-| Hazem Adel's Session      | _Primes, Sieve, Divisors, Smallest prime factor, Factorization_    | Video | [link](https://youtu.be/sFxWQ73khKs?si=A9hHlnURB4Mc36b5)             |
+| Hazem Adel's Session      | _Primes, Sieve, Divisors, Spf, Factorization_                      | Video | [link](https://youtu.be/sFxWQ73khKs?si=A9hHlnURB4Mc36b5)             |
 
 <br>
 
@@ -195,13 +193,14 @@ Complexity time:
 Code:
 
 ```cpp
-ll powMod(ll a, ll b) {
-    if (b == 0)return 1;
-    if (b == 1)return a;
-    ll ret = 1;
-    if (b % 2)ret = a % mod;
-    ll val = powMod(a, b / 2);
-    return (ret * val * val) % mod;
+ll powMod(ll x, ll y) {
+    ll ret = x, ans = 1;
+    while (y) {
+        if (y % 2) ans *= ret, ans %= mod;
+        ret *= ret, ret %= mod;
+        y >>= 2;
+    }
+    return ans;
 }
 ```
 
@@ -227,6 +226,76 @@ ll gcd(ll a, ll b) {
     return gcd(b % a, a);
 }
 ```
+
+<br>
+
+---
+
+<br>
+
+##### SPF
+
+Idea:
+> get prime factors of number and gen all prime factors
+
+Complexity time: <var>O( log (n) )</var>
+
+Code:
+
+```cpp
+struct modifiedSieve { // spf
+    int com[maxSize];
+
+    modifiedSieve() { sieve(); }
+
+    void sieve() {
+        iota(com, com + maxSize, 0);
+
+        com[0] = com[1] = -1;
+        for (int i = 2; (i * i) < maxSize; ++i)
+            if (com[i] == i)
+                for (int j = i * i; j < maxSize; j += i)
+                    if (com[j] == j)
+                        com[j] = i;
+    }
+
+    vector<int> factorize(int n) {
+        vector<int> ret;
+        while (n > 1)
+            ret.pb(com[n]), n /= com[n];
+        return ret;
+    }
+
+    vector<pair<int, int>> factorizeFrq(int n) {
+        vector<pair<int, int>> ret;
+        while (n > 1) {
+            int cnt = 0, cur = com[n];
+            while (n % cur == 0)
+                ++cnt, n /= cur;
+            ret.pb(cur, cnt);
+        }
+        return ret;
+    }
+} ms;
+```
+
+<details> 
+<summary>Hint</summary>
+
+```cpp
+   iota (arr, arr + sizeOfArray, initValue);
+```
+
+is equivalent to
+
+```cpp
+    com[0] = initValue;
+    for (int i = 0; i < sizeOfArray; ++i) {
+        com[i] += i;
+    }
+```
+
+</details>
 
 <br>
 
