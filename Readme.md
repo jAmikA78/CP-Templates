@@ -158,6 +158,7 @@ void sieve() {
 ---
 
 <br>
+
 ##### Power
 
 Idea:
@@ -210,7 +211,7 @@ ll powMod(ll a, ll b) {
 
 <br>
 
-##### Power
+##### GCD
 
 Idea:
 > ...
