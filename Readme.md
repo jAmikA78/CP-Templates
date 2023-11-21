@@ -290,8 +290,8 @@ is equivalent to
 
 ```cpp
     com[0] = initValue;
-    for (int i = 0; i < sizeOfArray; ++i) {
-        com[i] += i;
+    for (int i = 0; i < sizeOfArray - 1; ++i) {
+        com[i + 1] += com[i] + 1;
     }
 ```
 
