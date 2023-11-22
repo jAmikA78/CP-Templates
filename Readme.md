@@ -11,6 +11,8 @@
     - [Power with mod](#Power-with-mod)
     - [GCD](#GCD)
     - [SPF](#SPF)
+2. [Math](#Math)
+    - [Factorial](#factorial)
 
 <br>
 
@@ -296,6 +298,35 @@ is equivalent to
 ```
 
 </details>
+
+<br>
+
+---
+
+---
+
+<br>
+<br>
+
+## Math
+
+<br>
+
+##### factorial
+
+Idea:
+> ...
+
+Complexity time: <var> </var>
+
+Code:
+
+```cpp
+int factorial(int n) {
+    if (n == 1) return 1;
+    return n * factorial(n - 1);
+}
+```
 
 <br>
 
