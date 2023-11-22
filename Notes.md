@@ -15,4 +15,13 @@
 | by `10` | When last digit is _0_ ex: _110, 230_                       |
 | by `11` | When any alternative digits to produce _11_, see below      |
 
-![](./src/divisible by 11.webp)
+<br>
+<details>
+<summary>divisible by 11 steps</summary>
+<center>
+	<img src="./src/divisible by 11.webp">
+	
+[img src](https://www.mathwarehouse.com/arithmetic/numbers/divisibility-rules-and-tests.php#divisibilityBy11)
+</center>
+</details>
+<br>
