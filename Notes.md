@@ -1,6 +1,8 @@
  
 # Notes
 
+<p align="center">
+
 ### Divisibility Rules
 
 | Number  | Ex:                                                         |
@@ -24,4 +26,7 @@
 [img src](https://www.mathwarehouse.com/arithmetic/numbers/divisibility-rules-and-tests.php#divisibilityBy11)
 </center>
 </details>
+
+</p>
+
 <br>
