@@ -1,30 +1,28 @@
 # Code Templates
 
-### Table of content
+## Table of content
 
-1. [Number theory](#Number-Theory)
-    - [Is prime](#Check-number-if-prime-or-not)
-    - [Prime Factorization](#Prime-Factorization)
-    - [Get Divisors](#Get-Divisors)
-    - [Sieve of Eratosthenes](#Sieve-of-Eratosthenes)
-    - [Power](#Power)
-    - [Power with mod](#Power-with-mod)
-    - [GCD](#GCD)
-    - [SPF](#SPF)
-2. [Math](#Math)
+- [Code Templates](#code-templates)
+  - [Table of content](#table-of-content)
+    - [Number Theory](#number-theory)
+    - [Tutorials](#tutorials)
+    - [Check number if prime or not](#check-number-if-prime-or-not)
+    - [**Prime Factorization**](#prime-factorization)
+    - [**Get Divisors**](#get-divisors)
+    - [Sieve of Eratosthenes](#sieve-of-eratosthenes)
+    - [Power](#power)
+    - [Power with mod](#power-with-mod)
+    - [GCD](#gcd)
+    - [SPF](#spf)
+  - [Math](#math)
     - [Factorial](#factorial)
-
-<br>
 
 ---
 
-<br>
-
 ### Number Theory
 
-<br>
 
-#### Tutorials
+### Tutorials
 
 | Source                    | Content                                                            | Type  | link                                                                 |
 |---------------------------|--------------------------------------------------------------------|-------|----------------------------------------------------------------------|
@@ -38,19 +36,15 @@
 | CP-Algorithm              | _Divisors_                                                         | Blog  | [link](https://cp-algorithms.com/algebra/divisors.html)              |
 | Hazem Adel's Session      | _Primes, Sieve, Divisors, Spf, Factorization_                      | Video | [link](https://youtu.be/sFxWQ73khKs?si=A9hHlnURB4Mc36b5)             |
 
-<br>
-
 ---
 
-<br>
-
-##### Check number if prime or not
+### Check number if prime or not
 
 Idea:
 > loop on all numbers if number satisfy 2 conditions `n > 2` because `1` and `0` aren't primes :) if each one reminder
 > from number when modulus from 3 to sqrt(n) equals zero that `return 0`isn't prime :).
 
-Complexity time: <var>O( sqrt(n) )</var>
+Complexity time: $O( \sqrt n )$
 
 Code:
 
@@ -65,18 +59,14 @@ bool isPrime(ll n) {
 }
 ```
 
-<br>
-
 ---
 
-<br>
-
-##### **Prime Factorization**
+### **Prime Factorization**
 
 Idea:
-> create vector of pairs to store factors of num then looping from <var>2</var> to <var>sqrt(n)</var> and if
+> create vector of pairs to store factors of num then looping from $2$ to $/sqrt n$ and if
 
-Complexity time: <var>O( sqrt(n) )</var>
+Complexity time: $O( /sqrt n )
 
 Code:
 
@@ -98,18 +88,14 @@ veprs<ll> primeFactors(ll n) { // sqrt (n)
 }
 ```
 
-<br>
-
 ---
 
-<br>
-
-##### **Get Divisors**
+### **Get Divisors**
 
 Idea:
-> ....
+> $\cdots$
 
-Complexity time: <var>O( sqrt(n)  )</var>
+Complexity time: $O( /sqrt n )$
 
 Code:
 
@@ -127,18 +113,14 @@ vector<ll> divisors(ll n) {
 }
 ```
 
-<br>
-
 ---
 
-<br>
-
-##### Sieve of Eratosthenes
+### Sieve of Eratosthenes
 
 Idea:
-> ...
+> $\cdots$
 
-Complexity time: <var>O( n log log n )</var>
+Complexity time: $O( n \log \log n )$
 
 Code:
 
@@ -153,18 +135,14 @@ void sieve() {
 }
 ```
 
-<br>
-
 ---
 
-<br>
-
-##### Power
+### Power
 
 Idea:
-> ...
+> $\cdots$
 
-Complexity time:
+Complexity time: $\cdots$
 
 Code:
 
@@ -179,18 +157,14 @@ ll power(ll a, ll b) {
 }
 ```
 
-<br>
-
 ---
 
-<br>
-
-##### Power with mod
+### Power with mod
 
 Idea:
-> ...
+> $\cdots$
 
-Complexity time:
+Complexity time: $\cdots$
 
 Code:
 
@@ -206,18 +180,14 @@ ll powMod(ll x, ll y) {
 }
 ```
 
-<br>
-
 ---
 
-<br>
-
-##### GCD
+### GCD
 
 Idea:
-> ...
+> $\cdots$
 
-Complexity time: <var>O( log (n) )</var>
+Complexity time: $O( \log n )$
 
 Code:
 
@@ -229,18 +199,14 @@ ll gcd(ll a, ll b) {
 }
 ```
 
-<br>
-
 ---
 
-<br>
-
-##### SPF
+### SPF
 
 Idea:
 > get prime factors of number and gen all prime factors
 
-Complexity time: <var>O( log (n) )</var>
+Complexity time: $O( \log n )$
 
 Code:
 
@@ -282,6 +248,7 @@ struct modifiedSieve { // spf
 ```
 
 <details> 
+
 <summary>Hint</summary>
 
 ```cpp
@@ -299,25 +266,17 @@ is equivalent to
 
 </details>
 
-<br>
-
 ---
 
----
-
-<br>
-<br>
 
 ## Math
 
-<br>
-
-##### factorial
+### Factorial
 
 Idea:
 > ...
 
-Complexity time: <var> </var>
+Complexity time: $\cdots$
 
 Code:
 
@@ -328,8 +287,4 @@ int factorial(int n) {
 }
 ```
 
-<br>
-
 ---
-
-<br>
