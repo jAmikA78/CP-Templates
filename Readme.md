@@ -21,7 +21,6 @@
 
 ### Number Theory
 
-
 ### Tutorials
 
 | Source                    | Content                                                            | Type  | link                                                                 |
@@ -30,7 +29,7 @@
 | Mahmoud Ayman's Session 2 | *Modular Arithmetic, ...*                                          | Video | [link](https://youtu.be/n8_mqm2amzY?si=ck64qVKtoZsFRCd8)             |
 | Mostafa Saad              | _Primes_                                                           | Video | [link](https://youtu.be/VZBfW08ECgA)                                 |
 | Mostafa Saad              | _Factorization_                                                    | Video | [link](https://youtu.be/-5ApOQDhBtU)                                 |
-| Mostafa Saad              | _Fib, GCD, LCM, Pow_                                               | Video | [link](https://youtu.be/YklnFXpq0ZE?si=2ueThtekooj1o5uU)             |	
+| Mostafa Saad              | _Fib, GCD, LCM, Pow_                                               | Video | [link](https://youtu.be/YklnFXpq0ZE?si=2ueThtekooj1o5uU)             |
 | Muhammed Afifi            | _Prime factorization using Sieve_                                  | Video | [link](https://youtu.be/xUk2SggGDRc?si=rjt_Bjb3PYAmktZW)             |
 | CP-Algorithm              | _sieve-of-eratosthenes_                                            | Blog  | [link](https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html) |
 | CP-Algorithm              | _Divisors_                                                         | Blog  | [link](https://cp-algorithms.com/algebra/divisors.html)              |
@@ -64,7 +63,7 @@ bool isPrime(ll n) {
 ### **Prime Factorization**
 
 Idea:
-> create vector of pairs to store factors of num then looping from $2$ to $/sqrt n$ and if
+> create vector of pairs to store factors of num then looping from $2$ to $\sqrt n$ and if
 
 Complexity time: $O( \sqrt n )$
 
