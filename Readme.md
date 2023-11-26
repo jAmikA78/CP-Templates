@@ -66,7 +66,7 @@ bool isPrime(ll n) {
 Idea:
 > create vector of pairs to store factors of num then looping from $2$ to $/sqrt n$ and if
 
-Complexity time: $O( /sqrt n )
+Complexity time: $O( \sqrt n )$
 
 Code:
 
@@ -95,7 +95,7 @@ veprs<ll> primeFactors(ll n) { // sqrt (n)
 Idea:
 > $\cdots$
 
-Complexity time: $O( /sqrt n )$
+Complexity time: $O( \sqrt n )$
 
 Code:
 
