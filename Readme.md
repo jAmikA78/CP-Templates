@@ -14,6 +14,8 @@
     - [Power with mod](#power-with-mod)
     - [GCD](#gcd)
     - [SPF](#spf)
+    - [Sum of powers](#sum-of-powers)
+    - [Check Number if perfect square](#check-number-if-perfect-square)
   - [Math](#math)
     - [Factorial](#factorial)
 
@@ -24,7 +26,7 @@
 ### Tutorials
 
 | Source                    | Content                                                            | Type  | link                                                                 |
-|---------------------------|--------------------------------------------------------------------|-------|----------------------------------------------------------------------|
+| ------------------------- | ------------------------------------------------------------------ | ----- | -------------------------------------------------------------------- |
 | Mahmoud Ayman's Session 1 | *Divisors, GCD, LCM, Prime Factorization, Pow, PowMod, Sieve, lpf* | Video | [link](https://youtu.be/-ptnoz7Us_I?si=hDSCoXu97gNR6PPm)             |
 | Mahmoud Ayman's Session 2 | *Modular Arithmetic, ...*                                          | Video | [link](https://youtu.be/n8_mqm2amzY?si=ck64qVKtoZsFRCd8)             |
 | Mostafa Saad              | _Primes_                                                           | Video | [link](https://youtu.be/VZBfW08ECgA)                                 |
@@ -267,6 +269,40 @@ is equivalent to
 
 ---
 
+### Sum of powers
+
+Idea:
+> $\cdots$
+
+Complexity time: $O(power)$
+
+Code:
+
+```cpp
+ll sumOfPowers(ll a, int k) {
+    if (k == 0) return 0;
+    if (k % 2 == 1) return a * (1 + sumOfPowers(a, k - 1));
+    ll half = sumOfPowers(a, k / 2);
+    return half * (1 + half - sumOfPowers(a, k / 2 - 1));
+}
+```
+
+---
+
+### Check Number if perfect square
+
+Idea:
+> $\cdots$
+
+Complexity time:
+
+Code:
+
+```cpp
+bool PerSq(long double x) {
+    return (((long double) sqrt(x) - floor((long double) sqrt(x))) == 0);
+}
+```
 
 ## Math
 

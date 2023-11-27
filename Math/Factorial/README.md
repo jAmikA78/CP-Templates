@@ -22,6 +22,7 @@ int factorial(int n) {
 - $0!$ $=$ $1$
 
 <details>
+
 <summary>Proof</summary>
 
 - step 1
@@ -37,3 +38,10 @@ int factorial(int n) {
     $0! = \frac{1!}{1}$
 
 </details>
+
+## Notes:
+
+- Works on non negative integers.
+- Max value can you get factorial it is $21$.
+- $70!$ `->` smallest factorial larger than **googol** $1^{100}$.
+- Combination and Permutation are based on factorial.
